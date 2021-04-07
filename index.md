@@ -10,6 +10,7 @@
 ---
 
 ### Proyectos Python
+
 [Project 1 ](/sample_page)
 <img src="images/Python.jpeg?raw=true"/>
 
