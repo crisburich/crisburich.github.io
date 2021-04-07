@@ -4,7 +4,7 @@
 
 ### SQL Projects
 
-[Project 1](/sample_page)
+[Project 1](https://github.com/crisburich/sql_project.git)
 <img src="images/1768.sql_logo.png?raw=true"/>
 
 ---
