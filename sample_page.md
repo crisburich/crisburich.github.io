@@ -7,9 +7,24 @@
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
 ```javascript
-if (isAwesome){
-  return true
-}
+
+SELECT A.[PurchaseOrderID]
+      ,A.[PurchaseOrderDetailID]
+	  ,A.[OrderQty]
+	  ,A.[UnitPrice]
+      ,A.[LineTotal]
+	  ,B.[OrderDate]
+	  ,[OrderSizeCategory] = 
+	  CASE
+	  WHEN [OrderQty] > 500 THEN 'Large'
+	  WHEN [OrderQty] BETWEEN 51 AND 500 THEN 'Medium'
+	  ELSE 'Small'
+	  END
+	  	        
+  FROM [AdventureWorks2019].[Purchasing].[PurchaseOrderDetail] A
+  JOIN [AdventureWorks2019].[Purchasing].[PurchaseOrderHeader] B
+  ON A.[PurchaseOrderID] = B.[PurchaseOrderID]
+
 ```
 
 ### 2. Assess assumptions on which statistical inference will be based
