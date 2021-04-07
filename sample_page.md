@@ -10,11 +10,11 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 SELECT A.[PurchaseOrderID]
       ,A.[PurchaseOrderDetailID]
-	  ,A.[OrderQty]
-	  ,A.[UnitPrice]
+      ,A.[OrderQty]
+      ,A.[UnitPrice]
       ,A.[LineTotal]
-	  ,B.[OrderDate]
-	  ,[OrderSizeCategory] = 
+      ,B.[OrderDate]
+      ,[OrderSizeCategory] = 
 	  CASE
 	  WHEN [OrderQty] > 500 THEN 'Large'
 	  WHEN [OrderQty] BETWEEN 51 AND 500 THEN 'Medium'
