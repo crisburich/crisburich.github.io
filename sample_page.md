@@ -7,19 +7,30 @@
 
 SELECT A.[PurchaseOrderID]
       ,A.[PurchaseOrderDetailID]
-      ,A.[OrderQty]
-      ,A.[UnitPrice]
+	  ,A.[OrderQty]
+	  ,A.[UnitPrice]
       ,A.[LineTotal]
-      ,B.[OrderDate]
-      ,[OrderSizeCategory] = 
+	  ,B.[OrderDate]
+	  ,[OrderSizeCategory] = 
 	  CASE
 	  WHEN [OrderQty] > 500 THEN 'Large'
 	  WHEN [OrderQty] BETWEEN 51 AND 500 THEN 'Medium'
 	  ELSE 'Small'
 	  END
-	  	        
-  FROM [AdventureWorks2019].[Purchasing].[PurchaseOrderDetail] A
-  JOIN [AdventureWorks2019].[Purchasing].[PurchaseOrderHeader] B
+	  ,C.[Name] AS 'Product Name'
+	  ,[Subcategory] = ISNULL(D.[Name], 'None')
+	  ,E.[Name] AS 'Category'
+	  	  	        
+  FROM [Purchasing].[PurchaseOrderDetail] A
+  JOIN [Purchasing].[PurchaseOrderHeader] B
   ON A.[PurchaseOrderID] = B.[PurchaseOrderID]
+  JOIN [Production].[Product] C
+  ON A.[ProductID] = C.[ProductID]
+  LEFT JOIN [Production].[ProductSubcategory] D -- tengo muchos nulls
+  ON C.[ProductSubcategoryID] = D.[ProductSubcategoryID]
+  JOIN [Production].[Product] E
+  ON A.[ProductID] = E.[ProductID]
+
+  WHERE MONTH(B.[OrderDate]) = 12
 
 ```
