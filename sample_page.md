@@ -4,7 +4,7 @@
 ### 1. Conceptos aplicados: Joins, Case Statement
 
 
-```javascript
+```sql
 
 SELECT A.[PurchaseOrderID]
       ,A.[PurchaseOrderDetailID]
