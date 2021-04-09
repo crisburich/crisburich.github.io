@@ -32,5 +32,6 @@ SELECT A.[PurchaseOrderID]
   ON A.[ProductID] = E.[ProductID]
 
   WHERE MONTH(B.[OrderDate]) = 12
+  ORDER BY 6
 
 ```
