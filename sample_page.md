@@ -7,19 +7,19 @@
 
 SELECT A.[PurchaseOrderID]
       ,A.[PurchaseOrderDetailID]
-	  ,A.[OrderQty]
-	  ,A.[UnitPrice]
+      ,A.[OrderQty]
+      ,A.[UnitPrice]
       ,A.[LineTotal]
-	  ,B.[OrderDate]
-	  ,[OrderSizeCategory] = 
+      ,B.[OrderDate]
+      ,[OrderSizeCategory] = 
 	  CASE
 	  WHEN [OrderQty] > 500 THEN 'Large'
 	  WHEN [OrderQty] BETWEEN 51 AND 500 THEN 'Medium'
 	  ELSE 'Small'
 	  END
-	  ,C.[Name] AS 'Product Name'
-	  ,[Subcategory] = ISNULL(D.[Name], 'None')
-	  ,E.[Name] AS 'Category'
+      ,C.[Name] AS 'Product Name'
+      ,[Subcategory] = ISNULL(D.[Name], 'None')
+      ,E.[Name] AS 'Category'
 	  	  	        
   FROM [Purchasing].[PurchaseOrderDetail] A
   JOIN [Purchasing].[PurchaseOrderHeader] B
