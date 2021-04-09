@@ -32,7 +32,7 @@ SELECT A.[PurchaseOrderID]
   ON A.[ProductID] = E.[ProductID]
 
   WHERE MONTH(B.[OrderDate]) = 12
-  AND [OrderSizeCategory] != 'Small'
+  AND [UnitPrice] > 40
   OR D.[Name] = 'Pedals'
   ORDER BY 4
 
