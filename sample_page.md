@@ -1,5 +1,4 @@
-## This can be your internal website page / project page
-
+## Proyecto 1
 **Project description:** SQL cuenta con una serie de bases de datos ficticias que permiten aplicar conceptos de manera practica y similar a un entorno de trabajo concreto. En los ejemplos se utilizará AdventureWorks2019
 ### 1. Conceptos aplicados: Joins, Case Statement
 
