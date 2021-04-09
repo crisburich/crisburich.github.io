@@ -26,7 +26,7 @@ SELECT A.[PurchaseOrderID]
   ON A.[PurchaseOrderID] = B.[PurchaseOrderID]
   JOIN [Production].[Product] C
   ON A.[ProductID] = C.[ProductID]
-  LEFT JOIN [Production].[ProductSubcategory] D -- tengo muchos nulls
+  LEFT JOIN [Production].[ProductSubcategory] D 
   ON C.[ProductSubcategoryID] = D.[ProductSubcategoryID]
   JOIN [Production].[Product] E
   ON A.[ProductID] = E.[ProductID]
