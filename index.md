@@ -1,6 +1,8 @@
 ## Portfolio
  <br><br>
  [View my Resume](/pdf/CV Burich Cristian.pdf)
+ <br><br>
+ 
 ---
 
 ### SQL Projects
