@@ -12,9 +12,16 @@
 
 ---
 
+### R Projects
+
+[Project 2 ]()
+<img src="images/cover.png?raw=true"/>
+
+---
+
 ### Python Projects
 
-[Project 1 ]()
+[Project 3 ]()
 <img src="images/20151126041145_python-logo.png?raw=true"/>
 
 ---
