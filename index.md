@@ -1,6 +1,6 @@
 ## Portfolio
 
- [View my Resume](/pdf/CV Burich Cristian.pdf)
+ [View my Resume](/pdf/CV Burich, Cristian.pdf)
  <br><br>
  
 ---
