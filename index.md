@@ -5,24 +5,17 @@
  
 ---
 
-### SQL Projects
+### SQL Project
 
 [Project 1](/sample_page)
 <img src="images/1768.sql_logo.png?raw=true"/>
 
 ---
 
-### R Projects
+### R Project (wip)
 
 [Project 2 ]()
 <img src="images/cover.png?raw=true"/>
 
----
 
-### Python Projects
-
-[Project 3 ]()
-<img src="images/20151126041145_python-logo.png?raw=true"/>
-
----
 
